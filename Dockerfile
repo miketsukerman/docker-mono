@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get -y install rapidjson-dev openssl1.0 libssl1.0-dev libssl1.0.0 libcurl4 libcurl3-gnutls autoconf
+RUN apt-get update && apt-get -y install rapidjson-dev openssl1.0 libssl1.0-dev libssl1.0.0 libcurl4 libcurl3-gnutls autoconf gnupg2
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
 	&& echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | tee /etc/apt/sources.list.d/mono-official-stable.list \
